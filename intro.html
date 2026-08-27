@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Intro to JavaScript Assignment</title>
+
+    <style>
+        
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            margin: 50px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <label for="languageInput">What language was created to add interactivity to the Web? :</label>
+
+    <input type="text" id="languageInput">
+
+    <script>
+
+        document.getElementById("languageInput").addEventListener("change", function () {
+
+            let userAnswer = document.getElementById("languageInput").value;
+
+            alert("You typed: " + userAnswer);
+
+        });
+
+        let libraryChoice = prompt("Which code library would you prefer: jQuery, React, or Vue?");
+
+        alert("You chose: " + libraryChoice);
+
+    </script>
+
+</body>
+
+</html>
