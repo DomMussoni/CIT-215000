@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <title>Tip Calc</title>
+
+</head>
+
+  <script>
+
+    let bill = prompt("Please enter how much your last bill was (Without tax or tip) :");
+
+    bill = parseFloat(bill);
+
+    console.log("Bill: " + bill);
+
+    let taxedBill = bill * 1.07;
+
+    console.log("Taxed bill: " + taxedBill);
+
+    let tip = taxedBill * 0.15;
+
+    console.log("Tip: " + tip);
+
+    let finalBill = taxedBill + tip;
+
+    console.log("Final bill: " + finalBill);
+
+    document.write("Your final bill is $" + finalBill.toFixed(2) + "With your tax and tip, Thank you for eating with us Taco Egg shack!");
+
+  </script>
+
+</body>
+
+</html>
