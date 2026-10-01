@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Wheel Meal</title>
+
+</head>
+
+<body>
+
+  <p>Were you ever unable to decide what to have for dinner? Struggle no more.  The wheel of meals will decide for you!</p>
+
+  <button onclick="randomMeal()">SPIN THE WHEEL OF MEAL</button>
+
+  <p class="randomMeal">
+
+  </p>
+
+  <script>
+
+    const entree1 = {
+
+      starter: "Bacon Cheese Fries", main: "Beef Burger and Coleslaw", dessert: "Deep Fried Ice-Cream"
+
+    };
+
+    const entree2 = {
+
+      starter: "Smoked Salmon On Rye",
+
+      main: "Vegetarian Couscous Rolls",
+
+      dessert: "Fruit Plate"
+
+    };
+
+    const entree3 = {
+
+      starter: "Chips and Hummus",
+
+      main: "Grilled Chicken in Hot Sauce",
+
+      dessert: "Chocolate Ganache Cake"
+
+    };
+
+    const entree4 = {
+
+      starter: "Tomato Basil Soup",
+
+      main: "Spaghetti and Meatballs",
+
+      dessert: "Tiramisu"
+    };
+
+    const entree5 = {
+
+      starter: "Loaded Nachos", main: "Chicken Fajitas with Rice", dessert: "Churros with Chocolate Sauce"
+
+    };
+
+    const meals = [entree1, entree2, entree3, entree4, entree5];
+
+    const randomMeal = function() {
+
+      let mealNumber = Math.floor(Math.random() * meals.length);
+
+      showMeal(mealNumber);
+
+    };
+
+    const showMeal = (mealNumber) => {
+
+      let str = `The wheel has decided to go with ${meals[mealNumber].starter}, followed by ${meals[mealNumber].main}, and finish off your meal with ${meals[mealNumber].dessert}`;
+
+      let area = document.querySelector(".randomMeal");
+
+      area.innerHTML = str;
+
+    };
+
+  </script>
+
+</body>
+
+</html>
