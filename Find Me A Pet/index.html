@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Find Me A Pet</title>
+
+</head>
+
+<body>
+
+    <h1>Find Me A Pet</h1>
+
+    <label for="minAge">Please enter the minimum age for the dog:</label>
+
+    <input type="number" id="minAge">
+
+    <button id="findButton">Find Dogs</button>
+
+    <div id="results"></div>
+
+    <script>
+
+        const allDogs = [
+
+            { dogName: "Andy (in foster)", breed: "Terrier, American Pit Bull", age: 6 },
+
+            { dogName: "Apollo", breed: "Terrier, Pit Bull", age: 4 },
+
+            { dogName: "Apollo James", breed: "Dalmatian", age: 9 },
+
+            { dogName: "Archie", breed: "Retriever, Labrador", age: 1 },
+
+            { dogName: "Barley", breed: "Terrier, Bull", age: 4 },
+
+            { dogName: "Basil", breed: "Terrier, Staffordshire Bull", age: 3 },
+
+            { dogName: "Bella", breed: "Siberian Husky", age: 8 },
+
+            { dogName: "Blastoise (in foster)", breed: "Terrier, Pit Bull", age: 6 },
+
+            { dogName: "Brooklyn", breed: "Terrier, American Staffordshire", age: 7 },
+
+            { dogName: "Bubby", breed: "Terrier", age: 7 }
+
+        ];
+
+        function findDogs() {
+
+            const minAge = Number(document.getElementById("minAge").value);
+
+            const results = document.getElementById("results");
+
+            const selectedDogs = [];
+
+            allDogs.forEach(function (dog) {
+
+                if (dog.age > minAge) {
+
+                    selectedDogs.push(dog);
+
+                }
+
+            });
+
+            results.innerHTML = "";
+
+            selectedDogs.forEach(function (dog) {
+
+                results.innerHTML += "<p>" + dog.dogName + " - " + dog.breed + " - age " + dog.age + "</p>";
+
+            });
+
+            if (selectedDogs.length === 0) {
+
+                results.innerHTML = "<p>No dogs found.</p>";
+
+            }
+
+        }
+
+        document.getElementById("findButton").addEventListener("click", findDogs);
+
+    </script>
+
+</body>
+
+</html>
