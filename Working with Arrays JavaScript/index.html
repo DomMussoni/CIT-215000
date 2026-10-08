@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eternals</title>
+
+<style>
+
+body { font-family: Arial, sans-serif; margin: 40px; }
+
+#results { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px; }
+
+.card { border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 260px; }
+
+.card img { width: 100%; }
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Eternals</h1>
+
+<h2>Characters</h2>
+
+<ul id="characterList"></ul>
+
+<h2>Powers</h2>
+
+<ul id="powerList"></ul>
+
+<h2>Find a character by attribute</h2>
+
+<form id="searchForm">
+
+<label for="skillInput">Enter an attribute:</label>
+
+<input type="text" id="skillInput" placeholder="for example: sword">
+
+<button type="submit">Find</button>
+
+</form>
+
+<div id="results"></div>
+
+<script src="eternals.js"></script>
+
+</body>
+
+</html>
