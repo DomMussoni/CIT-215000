@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Animals</title>
+
+<style>
+
+body { font-family: Arial, sans-serif; margin: 40px; }
+
+#animalPic { width: 300px; margin-top: 15px; }
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Animals</h1>
+
+<label for="animalNumber">Select an animal number:</label>
+
+<select id="animalNumber"></select>
+
+<h2 id="animalName"></h2>
+
+<p id="animalAge"></p>
+
+<p id="animalWeight"></p>
+
+<p id="animalBreed"></p>
+
+<img id="animalPic" alt="" hidden>
+
+<script src="pets.js"></script>
+
+<script>
+
+const select = document.getElementById("animalNumber");
+
+const nameEl = document.getElementById("animalName");
+
+const ageEl = document.getElementById("animalAge");
+
+const weightEl = document.getElementById("animalWeight");
+
+const breedEl = document.getElementById("animalBreed");
+
+const pic = document.getElementById("animalPic");
+
+select.add(new Option("Select a number", ""));
+
+petsData.forEach((pet, index) => {
+
+select.add(new Option(index + 1, index + 1));
+
+});
+
+select.addEventListener("change", () => {
+
+const pet = petsData[Number(select.value) - 1];
+
+console.log("Selected number:", select.value, pet);
+
+if (!pet) {
+
+nameEl.textContent = "";
+
+ageEl.textContent = "";
+
+weightEl.textContent = "";
+
+breedEl.textContent = "";
+
+pic.hidden = true;
+
+return;
+
+}
+
+nameEl.textContent = pet.petName;
+
+ageEl.textContent = "Age: " + pet.age;
+
+weightEl.textContent = "Weight: " + pet.weightInKilos + " kg";
+
+breedEl.textContent = "Breed: " + pet.breed;
+
+pic.src = pet.pic.replace(/\\/g, "/");
+
+pic.alt = pet.petName;
+
+pic.hidden = false;
+
+});
+
+pic.addEventListener("error", () => {
+
+console.log("Image failed to load:", pic.src);
+
+});
+
+</script>
+
+</body>
+
+</html>
