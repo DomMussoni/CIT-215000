@@ -8,7 +8,7 @@ const eternalsData = [
 
         skills: ["matter transmutation", "empathy", "cosmic energy", "immortality"],
 
-        pic: "hero-pictures/sersi.png"
+        pic: "images/sersi.png"
 
     },
 
@@ -20,7 +20,7 @@ const eternalsData = [
 
         skills: ["flight", "super strength", "cosmic energy", "immortality"],
 
-        pic: "hero-pictures/ikaris.png"
+        pic: "images/ikaris.png"
 
     },
 
@@ -32,7 +32,7 @@ const eternalsData = [
 
         skills: ["sword", "spear", "super strength", "cosmic energy"],
 
-        pic: "hero-pictures/thena.png"
+        pic: "images/thena.png"
 
     },
 
@@ -44,7 +44,7 @@ const eternalsData = [
 
         skills: ["engineering", "invention", "cosmic energy", "immortality"],
 
-        pic: "hero-pictures/phastos.png"
+        pic: "images/phastos.png"
 
     },
 
@@ -56,7 +56,7 @@ const eternalsData = [
 
         skills: ["super speed", "sign language", "agility", "immortality"],
 
-        pic: "hero-pictures/makkari.png"
+        pic: "images/makkari.png"
 
     }
 
