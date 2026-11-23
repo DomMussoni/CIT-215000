@@ -93,10 +93,35 @@ const mtgColors = [
 ];
 
 const showColor = (color) => {
-
+  
+  const html = `
+  
+    <h2>${color.name}</h2>
+    
+    <p>${color.philosophy}</p>
+    
+    <p><strong>Strengths:</strong> ${color.strengths}</p>
+    
+    <p><strong>Iconic card:</strong> ${color.iconicCard}</p>
+    
+  `;
+  $("#display").html(html);
+  
+  $("#display").css("background-color", color.theme);
+  
+  $("#display").css("border-color", color.theme);
 };
 
-
 $(document).ready(() => {
-
+  
+  $(".color-btn").on("click", function () {
+    
+    const key = $(this).data("key");
+    
+    const color = mtgColors.find((c) => c.key === key);
+    
+    showColor(color);
+    
+  });
+  
 });
